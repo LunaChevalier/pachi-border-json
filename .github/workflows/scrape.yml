@@ -1,0 +1,37 @@
+name: Scrape pachi border data
+
+on:
+  schedule:
+    - cron: "0 0 * * 1"  # 毎週月曜日 AM 9:00 JST (UTC 00:00)
+  workflow_dispatch:
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run scrape script
+        run: python scripts/scrape.py
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add suggestions.json
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "chore: update suggestions.json"
+            git push
+          fi
