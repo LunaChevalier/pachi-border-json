@@ -1,0 +1,128 @@
+[
+  {
+    "name": "eリコリス・リコイル",
+    "releaseDate": "2026-04-06",
+    "borders": [
+      {
+        "rate": "YEN_4_3",
+        "baselineValue": 16.0
+      },
+      {
+        "rate": "YEN_4",
+        "baselineValue": 17.2
+      },
+      {
+        "rate": "YEN_1",
+        "baselineValue": 13.8
+      }
+    ]
+  },
+  {
+    "name": "e 終末のワルキューレ",
+    "releaseDate": "2026-04-06",
+    "borders": [
+      {
+        "rate": "YEN_4_3",
+        "baselineValue": 15.8
+      },
+      {
+        "rate": "YEN_4",
+        "baselineValue": 17.0
+      },
+      {
+        "rate": "YEN_1",
+        "baselineValue": 13.6
+      }
+    ]
+  },
+  {
+    "name": "e転生したらスライムだった件2",
+    "releaseDate": "2026-04-06",
+    "borders": [
+      {
+        "rate": "YEN_4_3",
+        "baselineValue": 15.9
+      },
+      {
+        "rate": "YEN_4",
+        "baselineValue": 17.1
+      },
+      {
+        "rate": "YEN_1",
+        "baselineValue": 13.7
+      }
+    ]
+  },
+  {
+    "name": "eラグナドール 妖しき皇帝と終焉の夜叉姫",
+    "releaseDate": "2026-04-06",
+    "borders": [
+      {
+        "rate": "YEN_4_3",
+        "baselineValue": 15.3
+      },
+      {
+        "rate": "YEN_4",
+        "baselineValue": 16.5
+      },
+      {
+        "rate": "YEN_1",
+        "baselineValue": 13.1
+      }
+    ]
+  },
+  {
+    "name": "P ウルトラマンメビウス デカヘソ319",
+    "releaseDate": "2026-04-06",
+    "borders": [
+      {
+        "rate": "YEN_4_3",
+        "baselineValue": 28.6
+      },
+      {
+        "rate": "YEN_4",
+        "baselineValue": 30.8
+      },
+      {
+        "rate": "YEN_1",
+        "baselineValue": 24.6
+      }
+    ]
+  },
+  {
+    "name": "P にゃんこ大戦争 多様性のネコ 神さまにおまかせ 88ver.",
+    "releaseDate": "2026-04-06",
+    "borders": [
+      {
+        "rate": "YEN_4_3",
+        "baselineValue": 17.1
+      },
+      {
+        "rate": "YEN_4",
+        "baselineValue": 18.4
+      },
+      {
+        "rate": "YEN_1",
+        "baselineValue": 14.7
+      }
+    ]
+  },
+  {
+    "name": "PAコマコマ倶楽部 with 坂本冬美 89確変ループ10ラウンド極",
+    "releaseDate": "2026-04-06",
+    "borders": [
+      {
+        "rate": "YEN_4_3",
+        "baselineValue": 16.9
+      },
+      {
+        "rate": "YEN_4",
+        "baselineValue": 18.2
+      },
+      {
+        "rate": "YEN_1",
+        "baselineValue": 14.6
+      }
+    ]
+  }
+]
