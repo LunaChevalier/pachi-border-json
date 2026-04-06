@@ -10,7 +10,6 @@ BASE_URL = "https://p-town.dmm.com"
 CALENDAR_URL = f"{BASE_URL}/machines/new_calendar"
 MACHINE_URL = f"{BASE_URL}/machines/{{id}}"
 OUTPUT_FILE = "suggestions.json"
-HTML_DIR = Path("html")
 
 # ●貸玉料金XX円 セクションのレートキーへのマッピング
 RATE_MAP = {
@@ -32,7 +31,7 @@ def fetch_calendar_html(page, url):
     return page.content()
 
 
-def fetch_machine_html(page, url, machine_id):
+def fetch_machine_html(page, url):
     """機種ページを開き、ボーダーセクションが表示されるまで待機してHTMLを返す"""
     print(f"Fetching: {url}")
     page.goto(url, wait_until="domcontentloaded", timeout=60000)
@@ -40,13 +39,8 @@ def fetch_machine_html(page, url, machine_id):
         page.wait_for_selector("h5[id^='anc-title-border-']", timeout=5000)
     except Exception:
         pass
-    html = page.content()
-
-    HTML_DIR.mkdir(exist_ok=True)
-    (HTML_DIR / f"{machine_id}.html").write_text(html, encoding="utf-8")
-
     print(f"Fetched: {url}")
-    return html
+    return page.content()
 
 
 def fetch_calendar(page):
@@ -142,7 +136,7 @@ def fetch_borders(page, machine_id):
     """機種IDからボーダー情報を取得する"""
     url = MACHINE_URL.format(id=machine_id)
     try:
-        html = fetch_machine_html(page, url, machine_id)
+        html = fetch_machine_html(page, url)
     except Exception:
         return []
 
@@ -179,11 +173,12 @@ def main():
             browser.close()
             return
 
-        results = []
+        fetched = []
         for i, machine in enumerate(machines, 1):
             print(f"[{i}/{len(machines)}] {machine['name']} のボーダー情報を取得中...")
             borders = fetch_borders(page, machine["id"])
-            results.append({
+            fetched.append({
+                "id": machine["id"],
                 "name": machine["name"],
                 "releaseDate": machine["releaseDate"],
                 "borders": borders,
@@ -192,14 +187,27 @@ def main():
         browser.close()
 
     # いずれの機種もボーダー情報が取得できなかった場合はJSONを更新しない
-    if not any(r["borders"] for r in results):
+    if not any(r["borders"] for r in fetched):
         print("ボーダー情報が取得できませんでした。JSONを更新せずに終了します")
         return
 
-    with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
+    # 既存JSONを読み込み、idをキーにupsert
+    output_path = Path(OUTPUT_FILE)
+    existing: list[dict] = []
+    if output_path.exists():
+        with open(output_path, encoding="utf-8") as f:
+            existing = json.load(f)
+
+    existing_map = {entry["id"]: entry for entry in existing if "id" in entry}
+    for entry in fetched:
+        existing_map[entry["id"]] = entry
+
+    results = list(existing_map.values())
+
+    with open(output_path, "w", encoding="utf-8") as f:
         json.dump(results, f, ensure_ascii=False, indent=2)
 
-    print(f"{OUTPUT_FILE} を更新しました（{len(results)}件）")
+    print(f"{OUTPUT_FILE} を更新しました（全{len(results)}件 / 今回{len(fetched)}件upsert）")
 
 
 if __name__ == "__main__":
