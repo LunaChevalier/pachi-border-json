@@ -132,15 +132,22 @@ def parse_borders(wysiwyg_text):
     return borders
 
 
-def fetch_borders(page, machine_id):
-    """機種IDからボーダー情報を取得する"""
+def fetch_machine_data(page, machine_id):
+    """機種IDからボーダー情報とひらがな名を取得する"""
     url = MACHINE_URL.format(id=machine_id)
     try:
         html = fetch_machine_html(page, url)
     except Exception:
-        return []
+        return [], ""
 
     soup = BeautifulSoup(html, "html.parser")
+
+    # ひらがな名を取得: div.titleruby > p.ruby
+    kana = ""
+    ruby_p = soup.select_one("div.titleruby p.ruby")
+    if ruby_p:
+        kana = ruby_p.get_text(strip=True)
+
     all_borders = []
 
     # h5[id^="anc-title-border-"] の直後の div.wysiwyg-box を解析
@@ -156,7 +163,7 @@ def fetch_borders(page, machine_id):
         if rate not in best or entry["baselineValue"] > best[rate]["baselineValue"]:
             best[rate] = entry
 
-    return list(best.values())
+    return list(best.values()), kana
 
 
 def main():
@@ -176,10 +183,12 @@ def main():
         fetched = []
         for i, machine in enumerate(machines, 1):
             print(f"[{i}/{len(machines)}] {machine['name']} のボーダー情報を取得中...")
-            borders = fetch_borders(page, machine["id"])
+            borders, kana = fetch_machine_data(page, machine["id"])
             fetched.append({
                 "id": machine["id"],
                 "name": machine["name"],
+                "kana": kana,
+                "url": MACHINE_URL.format(id=machine["id"]),
                 "releaseDate": machine["releaseDate"],
                 "borders": borders,
             })
