@@ -6900,7 +6900,20 @@
     "kana": "りんぐ さいきょうりょういき",
     "url": "https://p-town.dmm.com/machines/4994",
     "releaseDate": "2026-04-20",
-    "borders": []
+    "borders": [
+      {
+        "rate": "YEN_4_3",
+        "baselineValue": 16.1
+      },
+      {
+        "rate": "YEN_4",
+        "baselineValue": 17.4
+      },
+      {
+        "rate": "YEN_1",
+        "baselineValue": 13.9
+      }
+    ]
   },
   {
     "id": "4985",
@@ -6908,7 +6921,20 @@
     "kana": "えいてぃしっくす",
     "url": "https://p-town.dmm.com/machines/4985",
     "releaseDate": "2026-04-20",
-    "borders": []
+    "borders": [
+      {
+        "rate": "YEN_4_3",
+        "baselineValue": 18.9
+      },
+      {
+        "rate": "YEN_4",
+        "baselineValue": 20.4
+      },
+      {
+        "rate": "YEN_1",
+        "baselineValue": 16.3
+      }
+    ]
   },
   {
     "id": "4958",
@@ -6916,7 +6942,20 @@
     "kana": "きんにくまん",
     "url": "https://p-town.dmm.com/machines/4958",
     "releaseDate": "2026-04-20",
-    "borders": []
+    "borders": [
+      {
+        "rate": "YEN_4_3",
+        "baselineValue": 15.4
+      },
+      {
+        "rate": "YEN_4",
+        "baselineValue": 16.6
+      },
+      {
+        "rate": "YEN_1",
+        "baselineValue": 13.3
+      }
+    ]
   },
   {
     "id": "5006",
