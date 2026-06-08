@@ -24,7 +24,7 @@ def fetch_calendar_html(page, url):
     print(f"Fetching: {url}")
     page.goto(url, wait_until="domcontentloaded", timeout=60000)
     try:
-        page.wait_for_selector("li.unit", timeout=15000)
+        page.wait_for_selector("ul.list-machineintroduction", timeout=15000)
     except Exception:
         pass
     print(f"Fetched: {url}")
@@ -45,61 +45,47 @@ def fetch_machine_html(page, url):
 
 def fetch_calendar(page):
     """新台カレンダーから最新「導入」日のパチンコ機種を取得する"""
-    html = fetch_calendar_html(page, CALENDAR_URL)
+    today = date.today()
+    url = f"{CALENDAR_URL}?year={today.year}&month={today.month}"
+    html = fetch_calendar_html(page, url)
     soup = BeautifulSoup(html, "html.parser")
 
-    # section.spacebody ごとに日付と機種リストを収集
-    # p.title の形式: "2026年04月06日(月)導入" or "2026年04月20日(月)予定"
-    date_sections = []
-    for section in soup.find_all("section", class_="spacebody"):
-        h3 = section.find("h3", class_="-machine")
-        if not h3:
+    # ul.list-machineintroduction > li.item から機種と日付を収集
+    machines = []
+    for li in soup.select("ul.list-machineintroduction li.item"):
+        # パチンコのみ（-pinball クラスのspanを持つ）
+        if not li.find("span", class_="-pinball"):
             continue
-        title = h3.find("p", class_="title")
-        if not title:
+        a = li.find("a", class_="link")
+        if not a:
             continue
-        title_text = title.get_text(strip=True)
-        date_match = re.search(r"(\d{4})年(\d{2})月(\d{2})日", title_text)
+        href = a.get("href", "")
+        id_match = re.match(r"/machines/(\d+)", href)
+        if not id_match:
+            continue
+        name = a.get_text(strip=True)
+        date_div = li.find("div", class_="date")
+        if not date_div:
+            continue
+        date_match = re.search(r"(\d{4})年(\d{2})月(\d{2})日", date_div.get_text())
         if not date_match:
             continue
         release_date = f"{date_match.group(1)}-{date_match.group(2)}-{date_match.group(3)}"
-        date_sections.append((release_date, section))
+        machines.append({
+            "id": id_match.group(1),
+            "name": name,
+            "releaseDate": release_date,
+        })
 
-    if not date_sections:
+    if not machines:
         return []
 
-    # 今日以前の日付のみ対象にし、その中で最新の日付を選ぶ
-    today = date.today().isoformat()
-    past_sections = [(d, s) for d, s in date_sections if d <= today]
-    if not past_sections:
-        return []
-    latest_date = max(d for d, _ in past_sections)
-    date_sections = past_sections
-    latest_sections = [s for d, s in date_sections if d == latest_date]
+    # 今日以前の最新日付を選ぶ（未来のみなら最も近い未来日付）
+    today_str = today.strftime("%Y-%m-%d")
+    past_dates = [m["releaseDate"] for m in machines if m["releaseDate"] <= today_str]
+    target_date = max(past_dates) if past_dates else min(m["releaseDate"] for m in machines)
 
-    machines = []
-    for section in latest_sections:
-        for item in section.find_all("li", class_="unit"):
-            # パチンコのみ（-pinball クラスのspanを持つ）
-            if not item.find("span", class_="-pinball"):
-                continue
-            link = item.find("a", class_="link")
-            if not link:
-                continue
-            href = link.get("href", "")
-            id_match = re.match(r"/machines/(\d+)", href)
-            if not id_match:
-                continue
-            name_tag = link.find("p", class_="title")
-            if not name_tag:
-                continue
-            machines.append({
-                "id": id_match.group(1),
-                "name": name_tag.get_text(strip=True),
-                "releaseDate": latest_date,
-            })
-
-    return machines
+    return [m for m in machines if m["releaseDate"] == target_date]
 
 
 def parse_borders(wysiwyg_text):
