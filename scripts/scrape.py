@@ -44,15 +44,28 @@ def fetch_machine_html(page, url):
     return page.content()
 
 
-def fetch_calendar(_page):
+def fetch_calendar(page):
     """新台カレンダーから最新「導入」日のパチンコ機種を取得する"""
     today = date.today()
     url = f"{CALENDAR_URL}?year={today.year}&month={today.month}"
     print(f"Fetching: {url}")
-    resp = requests.get(url, headers={"User-Agent": "Mozilla/5.0"}, timeout=30)
-    resp.raise_for_status()
+    headers = {
+        "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
+        "Accept-Language": "ja,en-US;q=0.7,en;q=0.3",
+        "Accept-Encoding": "gzip, deflate, br",
+        "Connection": "keep-alive",
+        "Upgrade-Insecure-Requests": "1",
+    }
+    resp = requests.get(url, headers=headers, timeout=30)
+    if resp.ok:
+        html = resp.text
+    else:
+        # requests がブロックされた場合は Playwright にフォールバック
+        print(f"requests failed ({resp.status_code}), falling back to Playwright")
+        html = fetch_calendar_html(page, url)
     print(f"Fetched: {url}")
-    soup = BeautifulSoup(resp.text, "html.parser")
+    soup = BeautifulSoup(html, "html.parser")
 
     # ul.list-machineintroduction > li.item から機種と日付を収集
     machines = []
