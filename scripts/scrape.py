@@ -3,6 +3,7 @@ import re
 from datetime import date
 from pathlib import Path
 
+import requests
 from bs4 import BeautifulSoup
 from playwright.sync_api import sync_playwright
 
@@ -43,12 +44,15 @@ def fetch_machine_html(page, url):
     return page.content()
 
 
-def fetch_calendar(page):
+def fetch_calendar(_page):
     """新台カレンダーから最新「導入」日のパチンコ機種を取得する"""
     today = date.today()
     url = f"{CALENDAR_URL}?year={today.year}&month={today.month}"
-    html = fetch_calendar_html(page, url)
-    soup = BeautifulSoup(html, "html.parser")
+    print(f"Fetching: {url}")
+    resp = requests.get(url, headers={"User-Agent": "Mozilla/5.0"}, timeout=30)
+    resp.raise_for_status()
+    print(f"Fetched: {url}")
+    soup = BeautifulSoup(resp.text, "html.parser")
 
     # ul.list-machineintroduction > li.item から機種と日付を収集
     machines = []
