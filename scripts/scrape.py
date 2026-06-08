@@ -61,9 +61,9 @@ def fetch_calendar(page):
     if resp.ok:
         html = resp.text
     else:
-        # requests がブロックされた場合は Playwright にフォールバック
+        # requests がブロックされた場合は Playwright でメインURLにフォールバック
         print(f"requests failed ({resp.status_code}), falling back to Playwright")
-        html = fetch_calendar_html(page, url)
+        html = fetch_calendar_html(page, CALENDAR_URL)
     print(f"Fetched: {url}")
     soup = BeautifulSoup(html, "html.parser")
 
