@@ -6963,7 +6963,20 @@
     "kana": "ひきこまりきゅうけつきのもんもん",
     "url": "https://p-town.dmm.com/machines/5006",
     "releaseDate": "2026-05-11",
-    "borders": []
+    "borders": [
+      {
+        "rate": "YEN_4_3",
+        "baselineValue": 15.6
+      },
+      {
+        "rate": "YEN_4",
+        "baselineValue": 16.8
+      },
+      {
+        "rate": "YEN_1",
+        "baselineValue": 13.4
+      }
+    ]
   },
   {
     "id": "5005",
@@ -6971,7 +6984,20 @@
     "kana": "かけぐるい 219ばーじょん",
     "url": "https://p-town.dmm.com/machines/5005",
     "releaseDate": "2026-05-11",
-    "borders": []
+    "borders": [
+      {
+        "rate": "YEN_4_3",
+        "baselineValue": 15.4
+      },
+      {
+        "rate": "YEN_4",
+        "baselineValue": 16.6
+      },
+      {
+        "rate": "YEN_1",
+        "baselineValue": 13.2
+      }
+    ]
   },
   {
     "id": "5004",
@@ -6979,7 +7005,20 @@
     "kana": "かけぐるい 7500ばーじょん",
     "url": "https://p-town.dmm.com/machines/5004",
     "releaseDate": "2026-05-11",
-    "borders": []
+    "borders": [
+      {
+        "rate": "YEN_4_3",
+        "baselineValue": 15.7
+      },
+      {
+        "rate": "YEN_4",
+        "baselineValue": 16.9
+      },
+      {
+        "rate": "YEN_1",
+        "baselineValue": 13.5
+      }
+    ]
   },
   {
     "id": "4999",
@@ -6987,7 +7026,20 @@
     "kana": "るぱんさんせいばーさすきゃっつ あい 157ばーじょん きょくげんとっぱぶったぎり 7500",
     "url": "https://p-town.dmm.com/machines/4999",
     "releaseDate": "2026-05-11",
-    "borders": []
+    "borders": [
+      {
+        "rate": "YEN_4_3",
+        "baselineValue": 16.1
+      },
+      {
+        "rate": "YEN_4",
+        "baselineValue": 17.4
+      },
+      {
+        "rate": "YEN_1",
+        "baselineValue": 13.9
+      }
+    ]
   },
   {
     "id": "4995",
@@ -6995,7 +7047,20 @@
     "kana": "くいーん2",
     "url": "https://p-town.dmm.com/machines/4995",
     "releaseDate": "2026-05-11",
-    "borders": []
+    "borders": [
+      {
+        "rate": "YEN_4_3",
+        "baselineValue": 16.6
+      },
+      {
+        "rate": "YEN_4",
+        "baselineValue": 17.9
+      },
+      {
+        "rate": "YEN_1",
+        "baselineValue": 14.3
+      }
+    ]
   },
   {
     "id": "4980",
@@ -7003,7 +7068,20 @@
     "kana": "くいーんずぶれいどならくななえる79ばーじょん",
     "url": "https://p-town.dmm.com/machines/4980",
     "releaseDate": "2026-05-11",
-    "borders": []
+    "borders": [
+      {
+        "rate": "YEN_4_3",
+        "baselineValue": 16.7
+      },
+      {
+        "rate": "YEN_4",
+        "baselineValue": 18.0
+      },
+      {
+        "rate": "YEN_1",
+        "baselineValue": 14.4
+      }
+    ]
   },
   {
     "id": "4993",
@@ -7011,7 +7089,20 @@
     "kana": "まわるんちょうわーぷ ぎんぎらぱらだいす びば ふぇすた",
     "url": "https://p-town.dmm.com/machines/4993",
     "releaseDate": "2026-05-07",
-    "borders": []
+    "borders": [
+      {
+        "rate": "YEN_4_3",
+        "baselineValue": 20.7
+      },
+      {
+        "rate": "YEN_4",
+        "baselineValue": 22.3
+      },
+      {
+        "rate": "YEN_1",
+        "baselineValue": 17.8
+      }
+    ]
   },
   {
     "id": "5001",
@@ -7019,7 +7110,20 @@
     "kana": "すーぱーうみものがたりいんおきなわ6 うぃずえなこ",
     "url": "https://p-town.dmm.com/machines/5001",
     "releaseDate": "2026-06-08",
-    "borders": []
+    "borders": [
+      {
+        "rate": "YEN_4_3",
+        "baselineValue": 16.1
+      },
+      {
+        "rate": "YEN_4",
+        "baselineValue": 17.3
+      },
+      {
+        "rate": "YEN_1",
+        "baselineValue": 13.8
+      }
+    ]
   },
   {
     "id": "4998",
@@ -7027,7 +7131,20 @@
     "kana": "がくえんもくしろくはいすくーる おぶ ざ でっど3",
     "url": "https://p-town.dmm.com/machines/4998",
     "releaseDate": "2026-06-08",
-    "borders": []
+    "borders": [
+      {
+        "rate": "YEN_4_3",
+        "baselineValue": 15.9
+      },
+      {
+        "rate": "YEN_4",
+        "baselineValue": 17.1
+      },
+      {
+        "rate": "YEN_1",
+        "baselineValue": 13.7
+      }
+    ]
   },
   {
     "id": "4997",
@@ -7035,7 +7152,20 @@
     "kana": "めいひてんせい",
     "url": "https://p-town.dmm.com/machines/4997",
     "releaseDate": "2026-06-08",
-    "borders": []
+    "borders": [
+      {
+        "rate": "YEN_4_3",
+        "baselineValue": 16.3
+      },
+      {
+        "rate": "YEN_4",
+        "baselineValue": 17.6
+      },
+      {
+        "rate": "YEN_1",
+        "baselineValue": 14.1
+      }
+    ]
   },
   {
     "id": "4987",
@@ -7043,7 +7173,20 @@
     "kana": "ばけものがたり おに99ばーじょん",
     "url": "https://p-town.dmm.com/machines/4987",
     "releaseDate": "2026-06-08",
-    "borders": []
+    "borders": [
+      {
+        "rate": "YEN_4_3",
+        "baselineValue": 16.1
+      },
+      {
+        "rate": "YEN_4",
+        "baselineValue": 17.3
+      },
+      {
+        "rate": "YEN_1",
+        "baselineValue": 13.8
+      }
+    ]
   },
   {
     "id": "5037",
@@ -7063,6 +7206,203 @@
       {
         "rate": "YEN_1",
         "baselineValue": 14.5
+      }
+    ]
+  },
+  {
+    "id": "5014",
+    "name": "P 犬夜叉3.0 大入り 甘SPEC",
+    "kana": "いぬやしゃ3 0 おおいり あますぺっく",
+    "url": "https://p-town.dmm.com/machines/5014",
+    "releaseDate": "2026-05-25",
+    "borders": [
+      {
+        "rate": "YEN_4_3",
+        "baselineValue": 27.6
+      },
+      {
+        "rate": "YEN_4",
+        "baselineValue": 29.7
+      },
+      {
+        "rate": "YEN_1",
+        "baselineValue": 23.8
+      }
+    ]
+  },
+  {
+    "id": "5007",
+    "name": "デカスタP戦国無双100ver.",
+    "kana": "せんごくむそう100ばーじょん",
+    "url": "https://p-town.dmm.com/machines/5007",
+    "releaseDate": "2026-05-11",
+    "borders": [
+      {
+        "rate": "YEN_4_3",
+        "baselineValue": 28.2
+      },
+      {
+        "rate": "YEN_4",
+        "baselineValue": 30.4
+      },
+      {
+        "rate": "YEN_1",
+        "baselineValue": 24.3
+      }
+    ]
+  },
+  {
+    "id": "5003",
+    "name": "e バイオハザード6",
+    "kana": "ばいおはざーど6",
+    "url": "https://p-town.dmm.com/machines/5003",
+    "releaseDate": "2026-05-11",
+    "borders": [
+      {
+        "rate": "YEN_4_3",
+        "baselineValue": 15.8
+      },
+      {
+        "rate": "YEN_4",
+        "baselineValue": 17.0
+      },
+      {
+        "rate": "YEN_1",
+        "baselineValue": 13.6
+      }
+    ]
+  },
+  {
+    "id": "5008",
+    "name": "e ライザのアトリエ 〜常闇の女王と秘密の隠れ家〜",
+    "kana": "らいざのあとりえ とこやみのじょうおうとひみつのかくれが",
+    "url": "https://p-town.dmm.com/machines/5008",
+    "releaseDate": "2026-05-07",
+    "borders": [
+      {
+        "rate": "YEN_4_3",
+        "baselineValue": 17.9
+      },
+      {
+        "rate": "YEN_4",
+        "baselineValue": 19.3
+      },
+      {
+        "rate": "YEN_1",
+        "baselineValue": 15.4
+      }
+    ]
+  },
+  {
+    "id": "5024",
+    "name": "e 東京喰種 超デカ超一撃ver.",
+    "kana": "とうきょうぐーる ちょうでかちょういちげき ばーじょん",
+    "url": "https://p-town.dmm.com/machines/5024",
+    "releaseDate": "2026-06-08",
+    "borders": [
+      {
+        "rate": "YEN_4_3",
+        "baselineValue": 27.9
+      },
+      {
+        "rate": "YEN_4",
+        "baselineValue": 30.1
+      },
+      {
+        "rate": "YEN_1",
+        "baselineValue": 24.1
+      }
+    ]
+  },
+  {
+    "id": "5023",
+    "name": "PA花の慶次〜傾奇一転 87ver.",
+    "kana": "はなのけいじ かぶきいってん 87ばーじょん",
+    "url": "https://p-town.dmm.com/machines/5023",
+    "releaseDate": "2026-06-08",
+    "borders": [
+      {
+        "rate": "YEN_4_3",
+        "baselineValue": 16.0
+      },
+      {
+        "rate": "YEN_4",
+        "baselineValue": 17.2
+      },
+      {
+        "rate": "YEN_1",
+        "baselineValue": 13.8
+      }
+    ]
+  },
+  {
+    "id": "5022",
+    "name": "P 魔法少女まどか☆マギカ3 キュゥべえver.",
+    "kana": "まほうしょうじょまどか まぎかすりー きゅぅべえばーじょん",
+    "url": "https://p-town.dmm.com/machines/5022",
+    "releaseDate": "2026-06-08",
+    "borders": [
+      {
+        "rate": "YEN_4_3",
+        "baselineValue": 15.7
+      },
+      {
+        "rate": "YEN_4",
+        "baselineValue": 16.9
+      },
+      {
+        "rate": "YEN_1",
+        "baselineValue": 13.5
+      }
+    ]
+  },
+  {
+    "id": "5021",
+    "name": "eソードアート・オンライン オルタナティブ ガンゲイル・オンライン",
+    "kana": "そーどあーと おんらいん おるたなてぃぶ がんげいる おんらいん",
+    "url": "https://p-town.dmm.com/machines/5021",
+    "releaseDate": "2026-06-08",
+    "borders": [
+      {
+        "rate": "YEN_4_3",
+        "baselineValue": 15.7
+      },
+      {
+        "rate": "YEN_4",
+        "baselineValue": 16.9
+      },
+      {
+        "rate": "YEN_1",
+        "baselineValue": 13.5
+      }
+    ]
+  },
+  {
+    "id": "5018",
+    "name": "遊moreLT PエガブレイブVVV",
+    "kana": "ゆうもあらっきーとりがー えがぶれいぶぶいぶいぶい",
+    "url": "https://p-town.dmm.com/machines/5018",
+    "releaseDate": "2026-06-08",
+    "borders": []
+  },
+  {
+    "id": "5013",
+    "name": "eフィーバー デッドマウント・デスプレイ 魂神9000",
+    "kana": "でっどまうんと ですぷれい こんしん9000",
+    "url": "https://p-town.dmm.com/machines/5013",
+    "releaseDate": "2026-06-08",
+    "borders": [
+      {
+        "rate": "YEN_4_3",
+        "baselineValue": 16.2
+      },
+      {
+        "rate": "YEN_4",
+        "baselineValue": 17.5
+      },
+      {
+        "rate": "YEN_1",
+        "baselineValue": 14.0
       }
     ]
   }
