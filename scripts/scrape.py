@@ -1,3 +1,4 @@
+import argparse
 import json
 import re
 from datetime import date
@@ -44,10 +45,13 @@ def fetch_machine_html(page, url):
     return page.content()
 
 
-def fetch_calendar(page):
-    """新台カレンダーから最新「導入」日のパチンコ機種を取得する"""
+def fetch_calendar(page, year=None, month=None, all_dates=False):
+    """新台カレンダーからパチンコ機種を取得する。
+    year/month 未指定時は今月、all_dates=True 時は月内の全日付を返す。"""
     today = date.today()
-    url = f"{CALENDAR_URL}?year={today.year}&month={today.month}"
+    year = year or today.year
+    month = month or today.month
+    url = f"{CALENDAR_URL}?year={year}&month={month}"
     print(f"Fetching: {url}")
     headers = {
         "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
@@ -109,6 +113,12 @@ def fetch_calendar(page):
         print("対象日付(target_date): (なし)")
         print("最終フィルタ後件数: 0")
         return []
+
+    if all_dates:
+        dates = sorted(set(m["releaseDate"] for m in machines))
+        print(f"対象日付(全日付): {', '.join(dates)}")
+        print(f"最終フィルタ後件数: {len(machines)}")
+        return machines
 
     # 今日以前の最新日付を選ぶ（未来のみなら最も近い未来日付）
     today_str = today.strftime("%Y-%m-%d")
@@ -189,13 +199,28 @@ def fetch_machine_data(page, machine_id):
 
 
 def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--month", nargs="+", help="取得対象の月 (例: 2026-05 2026-06)", default=None)
+    args = parser.parse_args()
+
     print(f"実行日: {date.today()} (UTC)")
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=True)
         page = browser.new_page()
 
-        print("新台カレンダーを取得中...")
-        machines = fetch_calendar(page)
+        if args.month:
+            machines = []
+            for m in args.month:
+                try:
+                    year, month = map(int, m.split("-"))
+                except ValueError:
+                    print(f"--month の形式が不正です: '{m}' (正しい形式: YYYY-MM)")
+                    return
+                print(f"新台カレンダーを取得中... (指定月: {m})")
+                machines += fetch_calendar(page, year=year, month=month, all_dates=True)
+        else:
+            print("新台カレンダーを取得中...")
+            machines = fetch_calendar(page)
         print(f"{len(machines)}件の機種を取得しました")
 
         if not machines:

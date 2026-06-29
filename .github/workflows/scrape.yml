@@ -4,6 +4,11 @@ on:
   schedule:
     - cron: "0 0 * * 1"  # 毎週月曜日 AM 9:00 JST (UTC 00:00)
   workflow_dispatch:
+    inputs:
+      month:
+        description: '取得対象の月、複数はカンマ区切り (例: 2026-05,2026-06、空白の場合は自動)'
+        required: false
+        default: ''
 
 jobs:
   scrape:
@@ -25,7 +30,13 @@ jobs:
         run: playwright install --with-deps chromium
 
       - name: Run scrape script
-        run: python scripts/scrape.py
+        run: |
+          if [ -n "${{ github.event.inputs.month }}" ]; then
+            MONTHS=$(echo "${{ github.event.inputs.month }}" | tr ',' ' ')
+            python scripts/scrape.py --month $MONTHS
+          else
+            python scripts/scrape.py
+          fi
 
       - name: Commit and push if changed
         run: |
