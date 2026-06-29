@@ -7044,5 +7044,26 @@
     "url": "https://p-town.dmm.com/machines/4987",
     "releaseDate": "2026-06-08",
     "borders": []
+  },
+  {
+    "id": "5037",
+    "name": "PシャカRUSH Z Jr.",
+    "kana": "しゃからっしゅ ぜっと じゅにあ",
+    "url": "https://p-town.dmm.com/machines/5037",
+    "releaseDate": "2026-06-22",
+    "borders": [
+      {
+        "rate": "YEN_4_3",
+        "baselineValue": 16.8
+      },
+      {
+        "rate": "YEN_4",
+        "baselineValue": 18.1
+      },
+      {
+        "rate": "YEN_1",
+        "baselineValue": 14.5
+      }
+    ]
   }
 ]
