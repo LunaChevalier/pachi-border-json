@@ -58,9 +58,13 @@ def fetch_calendar(page):
         "Upgrade-Insecure-Requests": "1",
     }
     resp = requests.get(url, headers=headers, timeout=30)
+    print(f"HTTP status: {resp.status_code}")
+    print(f"Content-Type: {resp.headers.get('content-type', 'unknown')}")
+    print(f"Response size: {len(resp.text)} bytes")
     if resp.ok:
         html = resp.text
     else:
+        print(f"Response body (first 500 chars): {resp.text[:500]}")
         # requests がブロックされた場合は Playwright でメインURLにフォールバック
         print(f"requests failed ({resp.status_code}), falling back to Playwright")
         html = fetch_calendar_html(page, CALENDAR_URL)
@@ -68,11 +72,15 @@ def fetch_calendar(page):
     soup = BeautifulSoup(html, "html.parser")
 
     # ul.list-machineintroduction > li.item から機種と日付を収集
+    all_items = soup.select("ul.list-machineintroduction li.item")
+    print(f"li.item 総数: {len(all_items)}")
     machines = []
-    for li in soup.select("ul.list-machineintroduction li.item"):
+    pinball_count = 0
+    for li in all_items:
         # パチンコのみ（-pinball クラスのspanを持つ）
         if not li.find("span", class_="-pinball"):
             continue
+        pinball_count += 1
         a = li.find("a", class_="link")
         if not a:
             continue
@@ -94,15 +102,21 @@ def fetch_calendar(page):
             "releaseDate": release_date,
         })
 
+    print(f"パチンコ機種(-pinball)フィルタ後: {pinball_count}")
+
     if not machines:
+        print("対象日付(target_date): (なし)")
+        print("最終フィルタ後件数: 0")
         return []
 
     # 今日以前の最新日付を選ぶ（未来のみなら最も近い未来日付）
     today_str = today.strftime("%Y-%m-%d")
     past_dates = [m["releaseDate"] for m in machines if m["releaseDate"] <= today_str]
     target_date = max(past_dates) if past_dates else min(m["releaseDate"] for m in machines)
-
-    return [m for m in machines if m["releaseDate"] == target_date]
+    result = [m for m in machines if m["releaseDate"] == target_date]
+    print(f"対象日付(target_date): {target_date}")
+    print(f"最終フィルタ後件数: {len(result)}")
+    return result
 
 
 def parse_borders(wysiwyg_text):
@@ -121,6 +135,7 @@ def parse_borders(wysiwyg_text):
         rate_key = header_match.group(1)
         rate = RATE_MAP.get(rate_key)
         if not rate:
+            print(f"未知のレートキー: '{rate_key}'")
             continue
         # セクション内の最初のボーダー値を取得: "4.0円（25個）…16.1回転"
         for line in lines[1:]:
@@ -140,7 +155,8 @@ def fetch_machine_data(page, machine_id):
     url = MACHINE_URL.format(id=machine_id)
     try:
         html = fetch_machine_html(page, url)
-    except Exception:
+    except Exception as e:
+        print(f"機種ID {machine_id} の取得に失敗: {type(e).__name__}: {e}")
         return [], ""
 
     soup = BeautifulSoup(html, "html.parser")
@@ -154,7 +170,9 @@ def fetch_machine_data(page, machine_id):
     all_borders = []
 
     # h5[id^="anc-title-border-"] の直後の div.wysiwyg-box を解析
-    for h5 in soup.find_all("h5", id=re.compile(r"^anc-title-border-")):
+    h5_list = soup.find_all("h5", id=re.compile(r"^anc-title-border-"))
+    print(f"機種ID {machine_id}: ボーダーセクション数={len(h5_list)}, kana='{kana}'")
+    for h5 in h5_list:
         wysiwyg = h5.find_next_sibling("div")
         if wysiwyg:
             all_borders.extend(parse_borders(wysiwyg.get_text()))
@@ -170,6 +188,7 @@ def fetch_machine_data(page, machine_id):
 
 
 def main():
+    print(f"実行日: {date.today()} (UTC)")
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=True)
         page = browser.new_page()
@@ -187,6 +206,7 @@ def main():
         for i, machine in enumerate(machines, 1):
             print(f"[{i}/{len(machines)}] {machine['name']} のボーダー情報を取得中...")
             borders, kana = fetch_machine_data(page, machine["id"])
+            print(f"[{i}/{len(machines)}] {machine['name']}: ボーダー{len(borders)}件, kana='{kana}'")
             fetched.append({
                 "id": machine["id"],
                 "name": machine["name"],
