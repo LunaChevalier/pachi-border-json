@@ -57,6 +57,7 @@ def fetch_calendar(page):
         "Connection": "keep-alive",
         "Upgrade-Insecure-Requests": "1",
     }
+    print(f"Request headers: {headers}")
     resp = requests.get(url, headers=headers, timeout=30)
     print(f"HTTP status: {resp.status_code}")
     print(f"Content-Type: {resp.headers.get('content-type', 'unknown')}")
