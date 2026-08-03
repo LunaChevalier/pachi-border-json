@@ -7657,5 +7657,152 @@
         "baselineValue": 13.4
       }
     ]
+  },
+  {
+    "id": "5069",
+    "name": "e EDENS ZERO ～究極LT～",
+    "kana": "えでんずぜろ きゅうきょくえるてぃー",
+    "url": "https://p-town.dmm.com/machines/5069",
+    "releaseDate": "2026-08-03",
+    "borders": [
+      {
+        "rate": "YEN_4_3",
+        "baselineValue": 15.6
+      },
+      {
+        "rate": "YEN_4",
+        "baselineValue": 16.8
+      },
+      {
+        "rate": "YEN_1",
+        "baselineValue": 13.4
+      }
+    ]
+  },
+  {
+    "id": "5063",
+    "name": "Pぱちんこ押忍！番長 漢の頂 99ver.",
+    "kana": "おす ばんちょう おとこのいただき 99ばーじょん",
+    "url": "https://p-town.dmm.com/machines/5063",
+    "releaseDate": "2026-08-03",
+    "borders": [
+      {
+        "rate": "YEN_4_3",
+        "baselineValue": 16.0
+      },
+      {
+        "rate": "YEN_4",
+        "baselineValue": 17.2
+      },
+      {
+        "rate": "YEN_1",
+        "baselineValue": 13.8
+      }
+    ]
+  },
+  {
+    "id": "5062",
+    "name": "eぱちんこ押忍！番長 漢の頂 99ver.",
+    "kana": "おす ばんちょう おとこのいただき 99ばーじょん",
+    "url": "https://p-town.dmm.com/machines/5062",
+    "releaseDate": "2026-08-03",
+    "borders": [
+      {
+        "rate": "YEN_4_3",
+        "baselineValue": 16.0
+      },
+      {
+        "rate": "YEN_4",
+        "baselineValue": 17.2
+      },
+      {
+        "rate": "YEN_1",
+        "baselineValue": 13.8
+      }
+    ]
+  },
+  {
+    "id": "5056",
+    "name": "e 七つの大罪3",
+    "kana": "ななつのたいざい3",
+    "url": "https://p-town.dmm.com/machines/5056",
+    "releaseDate": "2026-08-03",
+    "borders": [
+      {
+        "rate": "YEN_4_3",
+        "baselineValue": 15.6
+      },
+      {
+        "rate": "YEN_4",
+        "baselineValue": 16.8
+      },
+      {
+        "rate": "YEN_1",
+        "baselineValue": 13.4
+      }
+    ]
+  },
+  {
+    "id": "5051",
+    "name": "eアクセル・ワールド",
+    "kana": "あくせる わーるど",
+    "url": "https://p-town.dmm.com/machines/5051",
+    "releaseDate": "2026-08-03",
+    "borders": [
+      {
+        "rate": "YEN_4_3",
+        "baselineValue": 15.7
+      },
+      {
+        "rate": "YEN_4",
+        "baselineValue": 16.9
+      },
+      {
+        "rate": "YEN_1",
+        "baselineValue": 13.5
+      }
+    ]
+  },
+  {
+    "id": "5045",
+    "name": "eフィーバー機動戦士ガンダムSEED クライマックス",
+    "kana": "きどうせんしがんだむしーど くらいまっくす",
+    "url": "https://p-town.dmm.com/machines/5045",
+    "releaseDate": "2026-08-03",
+    "borders": [
+      {
+        "rate": "YEN_4_3",
+        "baselineValue": 15.4
+      },
+      {
+        "rate": "YEN_4",
+        "baselineValue": 16.6
+      },
+      {
+        "rate": "YEN_1",
+        "baselineValue": 13.2
+      }
+    ]
+  },
+  {
+    "id": "5034",
+    "name": "e ソードアート・オンライン アリシゼーション 夜空",
+    "kana": "そーどあーと おんらいん ありしぜーしょん よぞら",
+    "url": "https://p-town.dmm.com/machines/5034",
+    "releaseDate": "2026-08-03",
+    "borders": [
+      {
+        "rate": "YEN_4_3",
+        "baselineValue": 18.6
+      },
+      {
+        "rate": "YEN_4",
+        "baselineValue": 20.0
+      },
+      {
+        "rate": "YEN_1",
+        "baselineValue": 16.0
+      }
+    ]
   }
 ]
