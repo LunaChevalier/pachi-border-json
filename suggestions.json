@@ -7804,5 +7804,202 @@
         "baselineValue": 16.0
       }
     ]
+  },
+  {
+    "id": "5080",
+    "name": "eタクトオーパス デスティニー",
+    "kana": "たくとおーぱす ですてぃにー",
+    "url": "https://p-town.dmm.com/machines/5080",
+    "releaseDate": "2026-09-07",
+    "borders": [
+      {
+        "rate": "YEN_4_3",
+        "baselineValue": 38.4
+      },
+      {
+        "rate": "YEN_4",
+        "baselineValue": 41.4
+      },
+      {
+        "rate": "YEN_1",
+        "baselineValue": 33.1
+      }
+    ]
+  },
+  {
+    "id": "5077",
+    "name": "e魔女と野獣",
+    "kana": "まじょとやじゅう",
+    "url": "https://p-town.dmm.com/machines/5077",
+    "releaseDate": "2026-09-07",
+    "borders": [
+      {
+        "rate": "YEN_4_3",
+        "baselineValue": 25.9
+      },
+      {
+        "rate": "YEN_4",
+        "baselineValue": 27.9
+      },
+      {
+        "rate": "YEN_1",
+        "baselineValue": 22.3
+      }
+    ]
+  },
+  {
+    "id": "5076",
+    "name": "eシン・ウルトラマン 79ver.",
+    "kana": "しん うるとらまん 79ばーじょん",
+    "url": "https://p-town.dmm.com/machines/5076",
+    "releaseDate": "2026-09-07",
+    "borders": [
+      {
+        "rate": "YEN_4_3",
+        "baselineValue": 16.8
+      },
+      {
+        "rate": "YEN_4",
+        "baselineValue": 18.1
+      },
+      {
+        "rate": "YEN_1",
+        "baselineValue": 14.5
+      }
+    ]
+  },
+  {
+    "id": "5075",
+    "name": "e アサルトリリィ",
+    "kana": "あさるとりりぃ",
+    "url": "https://p-town.dmm.com/machines/5075",
+    "releaseDate": "2026-09-07",
+    "borders": [
+      {
+        "rate": "YEN_4_3",
+        "baselineValue": 16.2
+      },
+      {
+        "rate": "YEN_4",
+        "baselineValue": 17.5
+      },
+      {
+        "rate": "YEN_1",
+        "baselineValue": 14.0
+      }
+    ]
+  },
+  {
+    "id": "5074",
+    "name": "Pうしおととら〜神のせSPEC〜100ver.",
+    "kana": "うしおととら かみのせすぺっく 100ばーじょん",
+    "url": "https://p-town.dmm.com/machines/5074",
+    "releaseDate": "2026-09-07",
+    "borders": [
+      {
+        "rate": "YEN_4_3",
+        "baselineValue": 15.4
+      },
+      {
+        "rate": "YEN_4",
+        "baselineValue": 16.6
+      },
+      {
+        "rate": "YEN_1",
+        "baselineValue": 13.3
+      }
+    ]
+  },
+  {
+    "id": "5070",
+    "name": "PHはねもの ハネ釈迦",
+    "kana": "はねもの はねしゃか",
+    "url": "https://p-town.dmm.com/machines/5070",
+    "releaseDate": "2026-09-07",
+    "borders": []
+  },
+  {
+    "id": "5067",
+    "name": "eフィーバー炎炎ノ消防隊2 99ver.",
+    "kana": "えんえんのしょうぼうたい2 99ばーじょん",
+    "url": "https://p-town.dmm.com/machines/5067",
+    "releaseDate": "2026-09-07",
+    "borders": [
+      {
+        "rate": "YEN_4_3",
+        "baselineValue": 16.0
+      },
+      {
+        "rate": "YEN_4",
+        "baselineValue": 17.2
+      },
+      {
+        "rate": "YEN_1",
+        "baselineValue": 13.7
+      }
+    ]
+  },
+  {
+    "id": "5058",
+    "name": "PA大海物語Withアグネス・ラム Premium Edition",
+    "kana": "おおうみものがたりうぃずあぐねす らむ ぷれみあむ えでぃしょん",
+    "url": "https://p-town.dmm.com/machines/5058",
+    "releaseDate": "2026-09-07",
+    "borders": [
+      {
+        "rate": "YEN_4_3",
+        "baselineValue": 17.3
+      },
+      {
+        "rate": "YEN_4",
+        "baselineValue": 18.6
+      },
+      {
+        "rate": "YEN_1",
+        "baselineValue": 14.9
+      }
+    ]
+  },
+  {
+    "id": "5050",
+    "name": "PA愛の不時着 99スイート ver.",
+    "kana": "あいのふじちゃく 99すいーと ばーじょん",
+    "url": "https://p-town.dmm.com/machines/5050",
+    "releaseDate": "2026-09-07",
+    "borders": [
+      {
+        "rate": "YEN_4_3",
+        "baselineValue": 17.0
+      },
+      {
+        "rate": "YEN_4",
+        "baselineValue": 18.3
+      },
+      {
+        "rate": "YEN_1",
+        "baselineValue": 14.6
+      }
+    ]
+  },
+  {
+    "id": "5043",
+    "name": "e 甲鉄城のカバネリ2 輪廻の果報119ver.",
+    "kana": "こうてつじょうのかばねり2 りんねのかほう119ばーじょん",
+    "url": "https://p-town.dmm.com/machines/5043",
+    "releaseDate": "2026-09-07",
+    "borders": [
+      {
+        "rate": "YEN_4_3",
+        "baselineValue": 16.1
+      },
+      {
+        "rate": "YEN_4",
+        "baselineValue": 17.3
+      },
+      {
+        "rate": "YEN_1",
+        "baselineValue": 13.8
+      }
+    ]
   }
 ]
