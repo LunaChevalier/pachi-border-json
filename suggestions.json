@@ -8001,5 +8001,47 @@
         "baselineValue": 13.8
       }
     ]
+  },
+  {
+    "id": "5071",
+    "name": "P 春一番 2026",
+    "kana": "はるいちばん 2026",
+    "url": "https://p-town.dmm.com/machines/5071",
+    "releaseDate": "2026-08-17",
+    "borders": [
+      {
+        "rate": "YEN_4_3",
+        "baselineValue": 17.4
+      },
+      {
+        "rate": "YEN_4",
+        "baselineValue": 18.7
+      },
+      {
+        "rate": "YEN_1",
+        "baselineValue": 15.0
+      }
+    ]
+  },
+  {
+    "id": "5060",
+    "name": "eゾン100〜ゾンビになるまでにしたい100のこと〜",
+    "kana": "ぞん100 ぞんびになるまでにしたい100のこと",
+    "url": "https://p-town.dmm.com/machines/5060",
+    "releaseDate": "2026-08-17",
+    "borders": [
+      {
+        "rate": "YEN_4_3",
+        "baselineValue": 28.2
+      },
+      {
+        "rate": "YEN_4",
+        "baselineValue": 30.4
+      },
+      {
+        "rate": "YEN_1",
+        "baselineValue": 24.3
+      }
+    ]
   }
 ]
