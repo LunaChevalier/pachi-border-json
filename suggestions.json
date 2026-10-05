@@ -8043,5 +8043,173 @@
         "baselineValue": 24.3
       }
     ]
+  },
+  {
+    "id": "5094",
+    "name": "e Re:ゼロから始める異世界生活 鬼がかり2",
+    "kana": "り ぜろからはじめるいせかいせいかつ おにがかり2",
+    "url": "https://p-town.dmm.com/machines/5094",
+    "releaseDate": "2026-10-05",
+    "borders": [
+      {
+        "rate": "YEN_4_3",
+        "baselineValue": 15.1
+      },
+      {
+        "rate": "YEN_4",
+        "baselineValue": 16.3
+      },
+      {
+        "rate": "YEN_1",
+        "baselineValue": 13.0
+      }
+    ]
+  },
+  {
+    "id": "5093",
+    "name": "SMART-PACHINKO GANTZ",
+    "kana": "すまーとぱちんこ がんつ",
+    "url": "https://p-town.dmm.com/machines/5093",
+    "releaseDate": "2026-10-05",
+    "borders": [
+      {
+        "rate": "YEN_4_3",
+        "baselineValue": 16.7
+      },
+      {
+        "rate": "YEN_4",
+        "baselineValue": 18.0
+      },
+      {
+        "rate": "YEN_1",
+        "baselineValue": 14.4
+      }
+    ]
+  },
+  {
+    "id": "5092",
+    "name": "デカスタeGODZILLA7 超震撼ver.",
+    "kana": "ごじら7 ちょうしんかんばーじょん",
+    "url": "https://p-town.dmm.com/machines/5092",
+    "releaseDate": "2026-10-05",
+    "borders": [
+      {
+        "rate": "YEN_4_3",
+        "baselineValue": 24.4
+      },
+      {
+        "rate": "YEN_4",
+        "baselineValue": 26.3
+      },
+      {
+        "rate": "YEN_1",
+        "baselineValue": 21.0
+      }
+    ]
+  },
+  {
+    "id": "5085",
+    "name": "e中森明菜・歌姫伝説～FORFANS～",
+    "kana": "なかもりあきな うたひめでんせつ ふぉーふぁんず",
+    "url": "https://p-town.dmm.com/machines/5085",
+    "releaseDate": "2026-10-05",
+    "borders": [
+      {
+        "rate": "YEN_4_3",
+        "baselineValue": 27.7
+      },
+      {
+        "rate": "YEN_4",
+        "baselineValue": 29.9
+      },
+      {
+        "rate": "YEN_1",
+        "baselineValue": 23.9
+      }
+    ]
+  },
+  {
+    "id": "5084",
+    "name": "P中森明菜・歌姫伝説～FORFANS～",
+    "kana": "なかもりあきな うたひめでんせつ ふぉーふぁんず",
+    "url": "https://p-town.dmm.com/machines/5084",
+    "releaseDate": "2026-10-05",
+    "borders": [
+      {
+        "rate": "YEN_4_3",
+        "baselineValue": 27.7
+      },
+      {
+        "rate": "YEN_4",
+        "baselineValue": 29.9
+      },
+      {
+        "rate": "YEN_1",
+        "baselineValue": 23.9
+      }
+    ]
+  },
+  {
+    "id": "5083",
+    "name": "e範馬刃牙 129ver.",
+    "kana": "はんまばき 129ばーじょん",
+    "url": "https://p-town.dmm.com/machines/5083",
+    "releaseDate": "2026-10-05",
+    "borders": [
+      {
+        "rate": "YEN_4_3",
+        "baselineValue": 15.2
+      },
+      {
+        "rate": "YEN_4",
+        "baselineValue": 16.4
+      },
+      {
+        "rate": "YEN_1",
+        "baselineValue": 13.1
+      }
+    ]
+  },
+  {
+    "id": "5072",
+    "name": "eACわんわんパラダイスCELEBRATION",
+    "kana": "わんわんぱらだいすせれぶれーしょん",
+    "url": "https://p-town.dmm.com/machines/5072",
+    "releaseDate": "2026-10-05",
+    "borders": [
+      {
+        "rate": "YEN_4_3",
+        "baselineValue": 16.2
+      },
+      {
+        "rate": "YEN_4",
+        "baselineValue": 17.5
+      },
+      {
+        "rate": "YEN_1",
+        "baselineValue": 14.0
+      }
+    ]
+  },
+  {
+    "id": "5066",
+    "name": "Pドラムde 電音部 超ドラ熱4500ver.",
+    "kana": "どらむで でんおんぶ ちょうどらあつ4500ばーじょん",
+    "url": "https://p-town.dmm.com/machines/5066",
+    "releaseDate": "2026-10-05",
+    "borders": [
+      {
+        "rate": "YEN_4_3",
+        "baselineValue": 28.3
+      },
+      {
+        "rate": "YEN_4",
+        "baselineValue": 30.5
+      },
+      {
+        "rate": "YEN_1",
+        "baselineValue": 24.4
+      }
+    ]
   }
 ]
