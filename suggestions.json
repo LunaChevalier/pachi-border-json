@@ -8211,5 +8211,26 @@
         "baselineValue": 24.4
       }
     ]
+  },
+  {
+    "id": "5091",
+    "name": "P 新世紀エヴァンゲリオン -319 RED-",
+    "kana": "しんせいきえゔぁんげりおん 319 れっど",
+    "url": "https://p-town.dmm.com/machines/5091",
+    "releaseDate": "2026-10-19",
+    "borders": [
+      {
+        "rate": "YEN_4_3",
+        "baselineValue": 15.8
+      },
+      {
+        "rate": "YEN_4",
+        "baselineValue": 17.0
+      },
+      {
+        "rate": "YEN_1",
+        "baselineValue": 13.6
+      }
+    ]
   }
 ]
