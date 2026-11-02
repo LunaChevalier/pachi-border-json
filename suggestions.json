@@ -8232,5 +8232,260 @@
         "baselineValue": 13.6
       }
     ]
+  },
+  {
+    "id": "5123",
+    "name": "eワンパンマン2～正義執行 99ver.",
+    "kana": "わんぱんまん2 せいぎしっこう 99ばーじょん",
+    "url": "https://p-town.dmm.com/machines/5123",
+    "releaseDate": "2026-11-02",
+    "borders": [
+      {
+        "rate": "YEN_4_3",
+        "baselineValue": 25.1
+      },
+      {
+        "rate": "YEN_4",
+        "baselineValue": 27.0
+      },
+      {
+        "rate": "YEN_1",
+        "baselineValue": 21.6
+      }
+    ]
+  },
+  {
+    "id": "5122",
+    "name": "e 仮面ライダーBLACK デカヘソ Light Version",
+    "kana": "かめんらいだーぶらっく でかへそ らいとばーじょん",
+    "url": "https://p-town.dmm.com/machines/5122",
+    "releaseDate": "2026-11-02",
+    "borders": [
+      {
+        "rate": "YEN_4_3",
+        "baselineValue": 26.4
+      },
+      {
+        "rate": "YEN_4",
+        "baselineValue": 28.5
+      },
+      {
+        "rate": "YEN_1",
+        "baselineValue": 22.8
+      }
+    ]
+  },
+  {
+    "id": "5115",
+    "name": "P天羽一閃 -一撃の「蒼」-",
+    "kana": "てんばいっせん いちげきのあお",
+    "url": "https://p-town.dmm.com/machines/5115",
+    "releaseDate": "2026-11-02",
+    "borders": []
+  },
+  {
+    "id": "5114",
+    "name": "P天羽一閃 -王道の「紅」-",
+    "kana": "てんばいっせん おうどうのあか",
+    "url": "https://p-town.dmm.com/machines/5114",
+    "releaseDate": "2026-11-02",
+    "borders": []
+  },
+  {
+    "id": "5112",
+    "name": "桃太郎電鉄 〜ぱちんこも定番！〜",
+    "kana": "ももたろうでんてつ ぱちんこもていばん",
+    "url": "https://p-town.dmm.com/machines/5112",
+    "releaseDate": "2026-11-02",
+    "borders": [
+      {
+        "rate": "YEN_4_3",
+        "baselineValue": 17.3
+      },
+      {
+        "rate": "YEN_4",
+        "baselineValue": 18.6
+      },
+      {
+        "rate": "YEN_1",
+        "baselineValue": 14.9
+      }
+    ]
+  },
+  {
+    "id": "5110",
+    "name": "桃太郎電鉄 〜ぱちんこも定番！〜LTver.",
+    "kana": "ももたろうでんてつ ぱちんこもていばん らっきーとりがーばーじょん",
+    "url": "https://p-town.dmm.com/machines/5110",
+    "releaseDate": "2026-11-02",
+    "borders": [
+      {
+        "rate": "YEN_4_3",
+        "baselineValue": 17.0
+      },
+      {
+        "rate": "YEN_4",
+        "baselineValue": 18.3
+      },
+      {
+        "rate": "YEN_1",
+        "baselineValue": 14.6
+      }
+    ]
+  },
+  {
+    "id": "5106",
+    "name": "eプリンセス・プリンシパル",
+    "kana": "ぷりんせす ぷりんしぱる",
+    "url": "https://p-town.dmm.com/machines/5106",
+    "releaseDate": "2026-11-02",
+    "borders": [
+      {
+        "rate": "YEN_4_3",
+        "baselineValue": 15.4
+      },
+      {
+        "rate": "YEN_4",
+        "baselineValue": 16.6
+      },
+      {
+        "rate": "YEN_1",
+        "baselineValue": 13.3
+      }
+    ]
+  },
+  {
+    "id": "5105",
+    "name": "eグランベルム 249ver.",
+    "kana": "ぐらんべるむ 249ばーじょん",
+    "url": "https://p-town.dmm.com/machines/5105",
+    "releaseDate": "2026-11-02",
+    "borders": [
+      {
+        "rate": "YEN_4_3",
+        "baselineValue": 16.1
+      },
+      {
+        "rate": "YEN_4",
+        "baselineValue": 17.3
+      },
+      {
+        "rate": "YEN_1",
+        "baselineValue": 13.8
+      }
+    ]
+  },
+  {
+    "id": "5102",
+    "name": "eとある魔術の禁書目録3",
+    "kana": "とあるまじゅつのいんでっくす3",
+    "url": "https://p-town.dmm.com/machines/5102",
+    "releaseDate": "2026-11-02",
+    "borders": [
+      {
+        "rate": "YEN_4_3",
+        "baselineValue": 16.1
+      },
+      {
+        "rate": "YEN_4",
+        "baselineValue": 17.3
+      },
+      {
+        "rate": "YEN_1",
+        "baselineValue": 13.8
+      }
+    ]
+  },
+  {
+    "id": "5088",
+    "name": "P羽根BASTARD!! -暗黒の破壊神-",
+    "kana": "はねばすたーど あんこくのはかいしん",
+    "url": "https://p-town.dmm.com/machines/5088",
+    "releaseDate": "2026-11-02",
+    "borders": []
+  },
+  {
+    "id": "5087",
+    "name": "e 獣王 獅子の一撃",
+    "kana": "じゅうおう ししのいちげき",
+    "url": "https://p-town.dmm.com/machines/5087",
+    "releaseDate": "2026-11-02",
+    "borders": [
+      {
+        "rate": "YEN_4_3",
+        "baselineValue": 24.8
+      },
+      {
+        "rate": "YEN_4",
+        "baselineValue": 26.7
+      },
+      {
+        "rate": "YEN_1",
+        "baselineValue": 21.4
+      }
+    ]
+  },
+  {
+    "id": "5082",
+    "name": "eグランベルム",
+    "kana": "ぐらんべるむ",
+    "url": "https://p-town.dmm.com/machines/5082",
+    "releaseDate": "2026-11-02",
+    "borders": [
+      {
+        "rate": "YEN_4_3",
+        "baselineValue": 15.6
+      },
+      {
+        "rate": "YEN_4",
+        "baselineValue": 16.8
+      },
+      {
+        "rate": "YEN_1",
+        "baselineValue": 13.5
+      }
+    ]
+  },
+  {
+    "id": "5081",
+    "name": "eフィーバー妖怪ウォッチ",
+    "kana": "ようかいうぉっち",
+    "url": "https://p-town.dmm.com/machines/5081",
+    "releaseDate": "2026-11-02",
+    "borders": [
+      {
+        "rate": "YEN_4_3",
+        "baselineValue": 16.1
+      },
+      {
+        "rate": "YEN_4",
+        "baselineValue": 17.4
+      },
+      {
+        "rate": "YEN_1",
+        "baselineValue": 13.9
+      }
+    ]
+  },
+  {
+    "id": "5078",
+    "name": "eノーゲーム・ノーライフ 119Ver.",
+    "kana": "のーげーむ のーらいふ 119ばーじょん",
+    "url": "https://p-town.dmm.com/machines/5078",
+    "releaseDate": "2026-11-02",
+    "borders": [
+      {
+        "rate": "YEN_4_3",
+        "baselineValue": 16.8
+      },
+      {
+        "rate": "YEN_4",
+        "baselineValue": 18.1
+      },
+      {
+        "rate": "YEN_1",
+        "baselineValue": 14.5
+      }
+    ]
   }
 ]
